@@ -1,11 +1,11 @@
 {
   "name": "Rock Paper Scissors",
   "short_name": "RPS",
-  "start_url": "index.html",
+  "start_url": "/Rock-Paper-Scissors/",
+  "scope": "/Rock-Paper-Scissors/",
   "display": "standalone",
   "background_color": "#0B1C2C",
   "theme_color": "#0B1C2C",
-  "orientation": "portrait",
   "icons": [
     {
       "src": "asset/icon-192.png",
@@ -19,4 +19,3 @@
     }
   ]
 }
-
