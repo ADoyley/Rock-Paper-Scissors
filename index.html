@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--For FontAwesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0B1C2C">
+
+    <link rel="stylesheet" href="/styles/styles.css">
+
+    <!--Jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./logic/app.js"></script>
+    <title>RPS v3</title>
+</head>
+<body>
+    <section class="title">
+        <h1>ROCK</h1>
+        <H1>PAPER</H1>
+        <H1>SCISSORS</H1>
+    </section>
+    <section class="scoring">
+        <article class="badge" id="user-score">
+            <h2>YOU</h2>
+            <span id="user-score">0</span>
+        </article>
+        <article class="badge" id="computer-score">
+            <h2>COMPUTER</h2>
+            <span id="computer-score">0</span>
+        </article>
+    </section>
+    <section class="selection">
+        <button class="rock-select" id="r">
+            <i class="fa-regular fa-hand-back-fist"></i>
+        </button>
+        <button class="paper-select" id="p">
+            <i class="fa-regular fa-hand"></i>
+        </button>
+        <button class="scissors-select" id="s">
+            <i class="fa-regular fa-hand-scissors"></i>
+        </button>
+        <span class="select-title">Rock</span>
+        <span class="select-title">Paper</span>
+        <span class="select-title">Scissors</span>
+    </section>
+    <section class="result">
+        <h4 id="result-msg"> ting</h4>
+    </section>
+    <section class="play">
+        <article id="left">
+            <img src="/asset/rock.png" alt="fist">
+        </article>
+        <article id="right">
+            <img src="/asset/rock.png" alt="fist">
+        </article>
+    </section>
+    
+    <script>
+        if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("/service-worker.js")
+      .then(() => console.log("Service Worker Registered"))
+      .catch(err => console.error("SW registration failed", err));
+    }
+    </script>
+
+</body>
+</html>

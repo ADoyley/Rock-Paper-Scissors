@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+:root{
+    --60: #0B1C2C;
+    --30: #F5F2ED;
+    --10: #4CA4AF;
+    --btn-r: #5E9CA0;
+    --btn-p: #E3CFA5;
+    --btn-s: #E26A5E;
+    --accent: #F5F2ED;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    color: var(--30);
+    background-color: var(--60);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.scoring{
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 30px;
+}
+
+.badge {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 180px;
+}
+
+h2 {
+  color: #4CA4AF;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.badge span {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.selection{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.selection button{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: none;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #F5F2ED;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rock-select {
+  background-color: #5E9CA0;
+}
+
+.paper-select {
+  background-color: #E3CFA5;
+  color: #0B1C2C;
+}
+
+.scissors-select {
+  background-color: #E26A5E;
+}
+
+/* Optional: Hover effect */
+.selection button:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+  transition: all 0.2s ease-in-out;
+}
+
+.select-title{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+#result-msg{
+  display: none;
+}
+
+.play{
+  display: flex;
+  
+}
+
+img{
+    width: 120px;
+    border-radius: 50%;
+}
+
+#right > img{
+    padding: 20px;
+    transform: scaleX(-1);
+    
+}
+
+#left{
+    padding: 20px;
+}
+
+/*Animation*/
+.shake-left {
+    animation: shake 0.5s;
+    animation-iteration-count: 3;
+}
+
+.shake-right {
+    animation: shake-right 0.5s;
+    animation-iteration-count: 3;
+}
+
+
+@keyframes shake {
+    0% { transform: rotate(0deg);}
+    50% { transform: rotate(20deg);}
+    100% { transform: rotate(0deg);}
+}
+
+@keyframes shake-right {
+    0% { transform: scaleX(-1) rotate(0deg);}
+    50% { transform: scaleX(-1) rotate(20deg);}
+    100% { transform: scaleX(-1) rotate(0deg);}
+}
+
+
+/* Mobile View*/
+@media screen and (max-width: 768px){
+  body{
+    margin: 44px 24px 34px 24px;
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+
+  .scoring {
+    gap: 1rem;
+    margin-bottom: 20px;
+  }
+
+   .badge {
+    width: 140px;
+    padding: 15px;
+  }
+
+  .selection {
+    gap: 1rem;
+    margin-top: 10px;
+  }
+
+  .selection button {
+    width: 80px;
+    height: 80px;
+    font-size: 2.2rem;
+    touch-action: manipulation;
+  }
+
+  .select-title {
+    font-size: 1.2rem;
+  }
+
+  .play {
+    margin-top: 20px;
+    gap: 1.5rem;
+  }
+
+  img {
+    width: 90px;
+  }
+
+  /*Prevent accidental double taps*/
+  .selection button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+  }
+
+  #result-msg {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 15px;
+    min-height: 1.5em;
+  }
+
+
+}
