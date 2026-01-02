@@ -1,12 +1,15 @@
 const CACHE_NAME = "rps-v1";
+const BASE_PATH = "/Rock-Paper-Scissors/";
+
 const ASSETS = [
-  "/",
-  "/index.html",
-  "/styles/styles.css",
-  "/logic/app.js",
-  "/asset/rock.png",
-  "/manifest.json"
+  BASE_PATH,
+  BASE_PATH + "index.html",
+  BASE_PATH + "styles/styles.css",
+  BASE_PATH + "logic/app.js",
+  BASE_PATH + "asset/rock.png",
+  BASE_PATH + "manifest.json"
 ];
+
 
 self.addEventListener("install", event => {
   event.waitUntil(
@@ -21,3 +24,4 @@ self.addEventListener("fetch", event => {
     })
   );
 });
+
